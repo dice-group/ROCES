@@ -47,7 +47,7 @@ cd Ontolearn && pip install -e .
 
 ## Reproducing the reported results
 
-- First download datasets and pretrained models from [here](https://drive.google.com/file/d/1j5nlaCPugHAF5ggFO0cBHL7L2YgUkAcS/view?usp=sharing). Extract the Zip file into the top directory ROCES and make sure the resulting folder is named `datasets`.
+- First download datasets and pretrained models from [here](https://files.dice-research.org/projects/NCES/ROCES/). Extract the Zip files into the top directory ROCES and make sure the resulting folders' names are conserved, i.e., `datasets`, `entity_embs` and `clip_weights`.
 
 
 ### ROCES (Ours)
@@ -70,6 +70,15 @@ cd Ontolearn && pip install -e .
 - To reproduce the main results (Table 2, Figures 2 and 3), run: ``` python run_nces2_and_roces_incremental.py ```. Specify the approach `--approach nces2`
 
 - Results on learning problems with full example sets (Table 2) can be found in the original paper https://link.springer.com/chapter/10.1007/978-3-031-43421-1_12, Table 4
+
+
+### CLIP (Kouagou et al. 2022)
+
+*Open a terminal and navigate into clip/* ``` cd ROCES/clip/ ```
+
+- Run `python run_clip_incremental.py --kb `. Use options to, e.g., select the knowledge base or save results.
+
+- For results on learning problems with full example sets (Table 3) run `python run_clip.py`. With `--kbs` you can specify on which dataset(s) to run, e.g., `--kbs carcinogenesis semantic_bible`
 
 
 ### EvoLearner (Heindorf et al. 2022)
