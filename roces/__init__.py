@@ -1,5 +1,5 @@
 class BaseConceptSynthesis:
-    """Supervised Machine Learning approach for learning class expressions in ALC from examples"""
+    """Supervised Machine Learning approach for learning class expressions in ALCHIQ(D) from examples"""
     
     def __init__(self, vocab, inv_vocab, kwargs):
         self.max_length = kwargs.max_length
