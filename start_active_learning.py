@@ -17,7 +17,7 @@ if __name__=="__main__":
     parser.add_argument('--kbs', type=str, nargs='+', default=['carcinogenesis', 'mutagenesis', 'semantic_bible', 'vicodi'], choices=['carcinogenesis', 'mutagenesis', 'vicodi', 'semantic_bible'], help='Knowledge base name. Check the folder `datasets` to see all available knowledge bases')
     parser.add_argument('--max_iter', type=int, default=20, help='Maximum number of iterations in an active learning task')
     parser.add_argument('--k_max', type=int, nargs='+', default=[3, 5, 7, 9, 11, 13], help='Maximum number of new individuals to label')
-    parser.add_argument('--start_size', type=int, default=3, help='Initial number of examples')
+    parser.add_argument('--start_size', type=int, default=16, help='Initial number of examples')
     args = parser.parse_args()
     results = {k: {kb: {"f1": [], "predictions": [], "best_pred": []} for kb in args.kbs} for k in args.k_max}
     for kb_name in args.kbs:
